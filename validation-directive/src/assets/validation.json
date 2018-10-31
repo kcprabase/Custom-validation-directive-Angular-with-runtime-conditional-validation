@@ -1,0 +1,57 @@
+{
+  "address": {
+    "address1": {
+      "required": true,
+      "type": "string",
+      "pattern": ".\\S.*$"
+    },
+    "city": {
+      "required": true,
+      "type": "string",
+      "pattern": "^[^0-9]*$"
+    },
+    "stateId": {
+      "required": true,
+      "type": "number"
+    },
+    "zipCode": {
+      "required": true,
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 5
+    },
+    "addressTypeListItemId": {
+      "required": true,
+      "type": "number"
+    },
+    "statusListItemId": {
+      "required": true,
+      "type": "number"
+    }
+  },
+
+  "user": {
+    "name": {
+      "required": true,
+      "type": "string",
+      "pattern": ".\\S.*$"
+    },
+    "emailAddress": {
+      "type": "string",
+      "pattern": "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "minLength":6
+    },
+    "age": {
+      "type": "number",
+      "required": true,
+      "min": 18
+    }
+  }
+
+
+}
